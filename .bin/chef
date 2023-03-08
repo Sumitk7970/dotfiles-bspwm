@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# move to a new empty workspace
+~/.config/i3/scripts/empty_workspace
+
+# open codechef 
+brave --new-window 'https://www.codechef.com/contests?itm_medium=navmenu&itm_campaign=allcontests' &
+
+# open vscode in the cp folder
+code ~/Programs/CP &

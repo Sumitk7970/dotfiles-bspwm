@@ -1,0 +1,185 @@
+{
+    "workbench.colorTheme": "Catppuccin Macchiato",
+    "editor.fontSize": 17,
+    "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
+
+    "multiCommand.commands": [
+        {
+            "command": "multiCommand.copyAll",
+            "sequence": [
+                "editor.action.selectAll",
+                "editor.action.clipboardCopyAction",
+                "extension.vim_ctrl+o"
+            ]
+        },
+        {
+            "command": "multiCommand.toggleSidebar",
+            "sequence": [
+                {
+                    "command": "workbench.action.toggleSidebarVisibility",
+                    "args": false
+                }
+            ]
+        }
+    ],
+    
+    // "vim.leader": "<space>",
+    // "vim.easymotion": true,
+    // "vim.incsearch": true,
+    // "vim.useSystemClipboard": true,
+    // "vim.useCtrlKeys": true,
+    // "vim.hlsearch": true,
+    // "vim.insertModeKeyBindings": [
+    //     {
+    //         "before": ["j", "j"],
+    //         "after": ["<Esc>"]
+    //     }
+    // ],
+    // "vim.normalModeKeyBindingsNonRecursive": [
+    //     {
+    //         "before": ["K"],
+    //         "commands": ["lineBreakInsert"],
+    //         "silent": true
+    //     },
+    //     {
+    //         "before": ["<leader>", "w"],
+    //         "commands": [
+    //             "workbench.action.files.save"
+    //         ]
+    //     },
+    //     {
+    //         "before": ["<leader>", "e"],
+    //         "commands": [
+    //             "workbench.action.toggleSidebarVisibility"
+    //         ]
+    //     },
+    //     {
+    //         "before": ["<leader>", "d"],
+    //         "after": ["d", "d"]
+    //     },
+    //     {
+    //         "before": ["<leader>", "c"],
+    //         "commands": [
+    //             "workbench.action.closeActiveEditor"
+    //         ]
+    //     },
+    //     {
+    //         "before": ["<leader>", "q"],
+    //         "commands": [
+    //             "workbench.action.closeEditorsInGroup"
+    //         ]
+    //     },
+    //     {
+    //         "before": ["<leader>", "/"],
+    //         "commands": [
+    //             "editor.action.commentLine"
+    //         ]
+    //     },
+    //     {
+    //         "before": ["<leader>", "a"],
+    //         "commands": [
+    //             "multiCommand.copyAll"
+    //         ],
+    //     },
+    //     {
+    //         "before": ["<leader>", "f", "f"],
+    //         "commands": [
+    //             "workbench.action.quickOpen"
+    //         ],
+    //     },
+    //     {
+    //         "before": ["u"],
+    //         "commands": [
+    //             "undo"
+    //         ]
+    //     },
+    //     {
+    //         "before": ["c-r"],
+    //         "commands": [
+    //             "redo"
+    //         ]
+    //     },
+    // ],
+    // "vim.handleKeys": {
+    //     "<C-a>": false,
+    //     "<C-b>": false,
+    //     "<C-f>": false
+    // },
+    // "vim.timeout": 500,
+
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "code-runner.runInTerminal": true,
+    "terminal.external.linuxExec": "alacritty",
+    "code-runner.saveFileBeforeRun": true,
+    "code-runner.executorMap": {
+        "javascript": "node",
+        "java": "cd $dir && javac -d ~/Programs/CP/.java_compiled $fileName && java -cp ~/Programs/CP/.java_compiled $fileNameWithoutExt",
+        "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "zig": "zig run",
+        "cpp": "cd $dir && g++ $fileName -o ~/Programs/CP/.cpp_compiled/$fileNameWithoutExt && ~/Programs/CP/.cpp_compiled/$fileNameWithoutExt",
+        "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "php": "php",
+        "python": "python -u",
+        "perl": "perl",
+        "perl6": "perl6",
+        "ruby": "ruby",
+        "go": "go run",
+        "lua": "lua",
+        "groovy": "groovy",
+        "powershell": "powershell -ExecutionPolicy ByPass -File",
+        "bat": "cmd /c",
+        "shellscript": "bash",
+        "fsharp": "fsi",
+        "csharp": "scriptcs",
+        "vbscript": "cscript //Nologo",
+        "typescript": "ts-node",
+        "coffeescript": "coffee",
+        "scala": "scala",
+        "swift": "swift",
+        "julia": "julia",
+        "crystal": "crystal",
+        "ocaml": "ocaml",
+        "r": "Rscript",
+        "applescript": "osascript",
+        "clojure": "lein exec",
+        "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+        "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+        "racket": "racket",
+        "scheme": "csi -script",
+        "ahk": "autohotkey",
+        "autoit": "autoit3",
+        "dart": "dart",
+        "pascal": "cd $dir && fpc $fileName && $dir$fileNameWithoutExt",
+        "d": "cd $dir && dmd $fileName && $dir$fileNameWithoutExt",
+        "haskell": "runghc",
+        "nim": "nim compile --verbosity:0 --hints:off --run",
+        "lisp": "sbcl --script",
+        "kit": "kitc --run",
+        "v": "v run",
+        "sass": "sass --style expanded",
+        "scss": "scss --style expanded",
+        "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
+        "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "sml": "cd $dir && sml $fileName"
+    },
+    
+    // for neovim extension
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+    "vscode-neovim.neovimInitVimPaths.linux": "~/.config/vscode-neovim/init.lua",
+    "catppuccin.italicKeywords": false,
+    "catppuccin.boldKeywords": false,
+    "catppuccin.accentColor": "lavender",
+    "[python]": {
+        "editor.formatOnType": true
+    },
+
+
+}
+
