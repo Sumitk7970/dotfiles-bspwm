@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # move to a new empty workspace
-~/.config/i3/scripts/empty_workspace
+~/.bin/next-empty-workspace-bspwm.sh
 
-# open codechef 
+# open codeforces contest page 
 brave --new-window 'https://www.codeforces.com/contests' &
 
 # open vscode in the cp folder

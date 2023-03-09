@@ -96,7 +96,27 @@ ll md = 1e9+7; //998244353;
 
 
 void solve () {
-    
+    int n;
+    cin>>n;
+
+    map<int,int> m;
+    for(int i=0; i<n; ++i) {
+        int temp;
+        cin>>temp;
+        m[temp]++;
+    }
+
+    int i=1;
+    ll prod = 1;
+    ll ans = 0;
+    for(auto it=m.begin(); it!=m.end(); ++it) {
+        if(it->first != i) break;
+        prod *= it->second;
+        ans = (ans + prod) % md;
+        i++;
+    }
+
+    cout<<ans<<endl;
 }
 
 

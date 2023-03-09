@@ -31,6 +31,14 @@ ShowInstallerIsoInfo() {
 }
 
 
+#=====================================================
+#                  add to path
+#=====================================================
+export PATH="/home/sumit/anaconda3/bin:$PATH"
+export PATH="/home/sumit/.local/bin:$PATH"
+export PATH="/home/sumit/.bin:$PATH"
+
+
 alias ls='ls --color=auto'
 alias ll='ls -lav --ignore=..'   # show long listing of all except ".."
 alias l='ls -lav --ignore=.?*'   # show long listing but no hidden dotfiles except "."
