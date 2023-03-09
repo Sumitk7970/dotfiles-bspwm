@@ -52,7 +52,7 @@ super + {p,b,comma,period}
 	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous window in the current desktop
-super + {_,shift + }c
+alt + {_,shift + }Tab
 	bspc node -f {next,prev}.local.!hidden.window
 
 # focus the next/previous desktop in the current monitor
@@ -147,10 +147,13 @@ XF86MonBrightness{Up,Down}
   ~/.bin/brightness --{up,down}
 
 # rofi menus
-super + {space,Print,i,o}
-	~/.config/rofi/bin/{launcher,screenshot,clipboard-manager,file-browser}
+super + {space,Print,v,o}
+	~/.config/rofi/bin/{launcher,screenshot,clipboard-manager-rofi,file-browser-rofi}
 
 # dmenu menus
 super + shift + e
 	~/.config/dmenu-scripts/powermenu-dmenu
 
+# temp
+ctrl + Escape
+	~/.config/polybar/launch.sh

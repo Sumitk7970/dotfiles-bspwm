@@ -1,5 +1,5 @@
 cmd                             "exo-open"
-dir "/"                         "/"
+dir                             "/home/sumit"
 depth                           2                         
 open-multi-key                  "kb-accept-alt"  
 open-custom-key                 "kb-custom-11"  

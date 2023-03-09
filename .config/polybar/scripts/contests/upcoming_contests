@@ -1,0 +1,8 @@
+{'id': 1801, 'name': 'Codeforces Round 857 (Div. 1)', 'type': 'CF', 'phase': 'BEFORE', 'frozen': False, 'durationSeconds': 7200, 'startTimeSeconds': 1678354500, 'relativeTimeSeconds': -334124}
+{'id': 1802, 'name': 'Codeforces Round 857 (Div. 2)', 'type': 'CF', 'phase': 'BEFORE', 'frozen': False, 'durationSeconds': 7200, 'startTimeSeconds': 1678354500, 'relativeTimeSeconds': -334124}
+{'id': 1804, 'name': 'Nebius Welcome Round (Div. 1 + Div. 2)', 'type': 'CF', 'phase': 'BEFORE', 'frozen': False, 'durationSeconds': 7200, 'startTimeSeconds': 1678631700, 'relativeTimeSeconds': -611325}
+{'id': 1797, 'name': 'Codeforces Round (Div. 2)', 'type': 'CF', 'phase': 'BEFORE', 'frozen': False, 'durationSeconds': 7200, 'startTimeSeconds': 1679061900, 'relativeTimeSeconds': -1041525}
+{'id': 1807, 'name': 'Codeforces Round 858 (Div. 4)', 'type': 'ICPC', 'phase': 'BEFORE', 'frozen': False, 'durationSeconds': 8100, 'startTimeSeconds': 1679236500, 'relativeTimeSeconds': -1216125}
+{'id': 1798, 'name': 'Codeforces Round (Div. 2)', 'type': 'CF', 'phase': 'BEFORE', 'frozen': False, 'durationSeconds': 7200, 'startTimeSeconds': 1679841300, 'relativeTimeSeconds': -1820925}
+{'id': 1805, 'name': 'Codeforces Round (Div. 2)', 'type': 'CF', 'phase': 'BEFORE', 'frozen': False, 'durationSeconds': 7200, 'startTimeSeconds': 1680446100, 'relativeTimeSeconds': -2425725}
+{'id': 1806, 'name': 'Codeforces Round (Div. 2)', 'type': 'CF', 'phase': 'BEFORE', 'frozen': False, 'durationSeconds': 7200, 'startTimeSeconds': 1680955500, 'relativeTimeSeconds': -2935125}
