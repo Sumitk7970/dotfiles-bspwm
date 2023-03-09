@@ -62,4 +62,3 @@ libinput-gestures-setup start &
 # start greenclip daemon
 greenclip daemon &
 
-
