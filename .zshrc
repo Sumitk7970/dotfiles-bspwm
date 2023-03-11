@@ -43,6 +43,9 @@ export EDITOR='nvim'
 # set bat as manpager
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 
+# for java awt applications not working properly
+export _JAVA_AWT_WM_NONREPARENTING=1
+
 # run pfetch at startup
 pfetch
 
@@ -69,4 +72,6 @@ alias v="vim"
 alias gt="cd ~/Downloads/gitthings"
 alias cat="bat"
 alias less="bat"
+alias ex="atool -x"
+alias mysql="mycli"
 

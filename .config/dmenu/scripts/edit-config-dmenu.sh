@@ -7,6 +7,7 @@ options["zsh"]="/home/sumit/.zshrc"
 options["bspwm"]="/home/sumit/.config/bspwm/bspwmrc"
 options["sxhkd"]="/home/sumit/.config/sxhkd/sxhkdrc"
 options["polybar"]="/home/sumit/.config/polybar/modules.ini"
+options["picom"]="/home/sumit/.config/picom/picom.conf"
 
 choice=$(for key in ${!options[@]}; do echo $key; done | $DMENU "Edit config" -fn 'JetBrainsMono Nerd Font:size=11')
 if [[ -v "options[$choice]" ]]; then
