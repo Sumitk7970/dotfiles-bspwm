@@ -70,7 +70,7 @@ wider_completion_menu = False
 # \A - DSN alias name (from the [alias_dsn] section)
 # \u - Username
 # \x1b[...m - insert ANSI escape sequence
-prompt = '\t [\d] ❯ '
+prompt = '\t \u@[\d] ❯ '
 prompt_continuation = '- ❯'
 
 # Skip intro info on startup and outro info on exit
@@ -84,7 +84,7 @@ login_path_as_host = False
 auto_vertical_output = False
 
 # keyword casing preference. Possible values "lower", "upper", "auto"
-keyword_casing = auto
+keyword_casing = upper
 
 # disabled pager on startup
 enable_pager = True

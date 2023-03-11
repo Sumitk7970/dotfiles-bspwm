@@ -1,0 +1,10 @@
+
+Mar 10, 2023 22:18:29.828 NEW SESSION
+Mar 10, 2023 22:18:29.828 which: no mozilla in (/home/sumit/.bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/home/sumit/.bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl)
+Mar 10, 2023 22:18:29.829 which: no netscape in (/home/sumit/.bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/home/sumit/.bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl)
+Mar 10, 2023 22:18:29.830 /usr/bin/firefox
+
+Mar 11, 2023 24:01:34.935 NEW SESSION
+Mar 11, 2023 24:01:34.935 which: no mozilla in (/home/sumit/.bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/home/sumit/.bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl)
+Mar 11, 2023 24:01:34.936 which: no netscape in (/home/sumit/.bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/home/sumit/.bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl)
+Mar 11, 2023 24:01:34.937 /usr/bin/firefox
