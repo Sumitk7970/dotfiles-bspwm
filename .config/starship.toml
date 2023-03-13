@@ -23,9 +23,17 @@ scan_timeout = 10
 # Disable the blank line at the start of the prompt
 add_newline = true
 
+# [character]
+# success_symbol = "[❯](sapphire)[❯](lavender)[❯](green)"
+# error_symbol = "[❯](sapphire)[❯](lavender)[❯](red)"
+
 [directory]
 read_only = " "
 style = "lavender"
+
+[git_branch]
+format = "[󰣏](sky) [$symbol$branch ]($style)"
+style="bold pink"
 
 [palettes.catppuccin_macchiato]
 rosewater = "#f4dbd6"

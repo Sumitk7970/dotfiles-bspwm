@@ -46,7 +46,7 @@ nmap zk O<Esc>j
 " nmap <leader>j <c-w>j
 
 " Closing tabs
-nmap <leader>c :action CloseContent<cr>
+nmap <leader>c :action CloseEditor<cr>
 nmap <leader>C :action ReopenClosedTab<cr>
 
 " Switch projects
@@ -73,8 +73,9 @@ nmap <leader>wd :action OpenEditorInOppositeTabGroup<cr>
 " nmap <leader>ww :action JumpToLastWindow<cr>
 
 " NERDTree
-map <leader>nn :NERDTree<CR>
+map <leader>e :NERDTree<CR>
 map <leader>nf :NERDTreeFind<CR>
+map <leader>n  :action NewFile<CR>
 
 " Navigation
 nmap <leader>h :action Back<cr>

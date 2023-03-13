@@ -20,6 +20,7 @@ bspc rule -a Screenkey manage=off
 bspc rule -a Blueman-manager state=floating
 bspc rule -a nm-connection-editor state=floating
 bspc rule -a Yad state=floating
+bspc rule -a lxappearance state=floating
 
 #=============================================
 #                   Border

@@ -148,7 +148,7 @@ XF86MonBrightness{Up,Down}
 
 # rofi menus
 super + {space,Print,v,o}
-	~/.config/rofi/bin/{launcher,screenshot,clipboard-manager-rofi,file-browser-rofi}
+	~/.config/rofi/bin/{launcher.sh,screenshot.sh,clipboard-manager-rofi,file-browser-rofi}
 
 # dmenu menus
 super + {e,shift + e}

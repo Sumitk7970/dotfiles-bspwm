@@ -152,7 +152,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="/home/sumit/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/ROOT" path="" reloadable="false"/><Context docBase="/home/sumit/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/solution-code-spring-rest-demo-hello-world" path="/spring-rest-demo" reloadable="true" source="org.eclipse.jst.jee.server:solution-code-spring-rest-demo-hello-world"/></Host>
+      <Context docBase="/home/sumit/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/ROOT" path="" reloadable="false"/><Context docBase="/home/sumit/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/solution-code-spring-rest-demo-hello-world" path="/spring-rest-demo" reloadable="true" source="org.eclipse.jst.jee.server:solution-code-spring-rest-demo-hello-world"/><Context docBase="/home/sumit/eclipse-workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp0/wtpwebapps/web-customer-tracker" path="/web-customer-tracker" reloadable="true" source="org.eclipse.jst.jee.server:web-customer-tracker"/></Host>
     </Engine>
   </Service>
 </Server>

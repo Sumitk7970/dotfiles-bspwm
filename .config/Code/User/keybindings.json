@@ -146,6 +146,10 @@
         "command": "selectPrevSuggestion",
         "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
     },
+    
+    //===========================================================
+    //                  vscode-nvim
+    //===========================================================
     {
         "command": "vscode-neovim.compositeEscape1",
         "key": "j",
@@ -159,5 +163,29 @@
     {
         "key": "ctrl+b",
         "command": "-workbench.action.toggleSidebarVisibility"
-    }
+    },
+
+	{
+		"command": "vscode-neovim.compositeEscape1",
+		"key": "j",
+		"when": "neovim.mode == insert && editorTextFocus",
+		"args": "j"
+	},
+	{
+		"command": "vscode-neovim.compositeEscape2",
+		"key": "k",
+		"when": "neovim.mode == insert && editorTextFocus",
+		"args": "k"
+	},
+	{
+		"key": "space",
+		"command": "whichkey.show",
+		"when": "sideBarFocus && !textInputFocus && !inputFocus"
+	},
+	{
+		"key": "shift+space",
+		"command": "whichkey.show",
+		"when": "textInputFocus || inputFocus"
+	},
+
 ]

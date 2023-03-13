@@ -1,3 +1,4 @@
 #Tomcat publish data
-#Sat Mar 11 00:43:15 IST 2023
-org.eclipse.jst.jee.server\:/binary\:/home/sumit/.m2/repository/org/springframework/spring-web/5.0.5.RELEASE/spring-web-5.0.5.RELEASE.jar=WEB-INF/lib/spring-web-5.0.5.RELEASE.jar
+#Sun Mar 12 19:56:39 IST 2023
+org.eclipse.jst.jee.server\:/binary\:/home/sumit/eclipse-workspace/web-customer-tracker/WebContent/WEB-INF/lib/spring-web-5.3.8-sources.jar=WEB-INF/lib/spring-web-5.3.8-sources.jar
+org.eclipse.jst.jee.server\:/binary\:/home/sumit/eclipse-workspace/web-customer-tracker/WebContent/WEB-INF/lib/spring-web-5.3.8.jar=WEB-INF/lib/spring-web-5.3.8.jar
