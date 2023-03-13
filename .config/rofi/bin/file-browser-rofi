@@ -1,1 +1,1 @@
-rofi -modi file-browser-extended -show file-browser-extended
+rofi -modi file-browser-extended -show file-browser-extended -theme ~/.config/rofi/themes/catppuccin-file-browser-theme.rasi 
