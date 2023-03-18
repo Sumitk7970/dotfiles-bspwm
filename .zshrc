@@ -74,4 +74,9 @@ alias cat="bat"
 alias less="bat"
 alias ex="atool -x"
 alias mysql="mycli"
+alias vpn="protonvpn-cli"
 
+
+
+# Load Angular CLI autocompletion.
+# source <(ng completion script)

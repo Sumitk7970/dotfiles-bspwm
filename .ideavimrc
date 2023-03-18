@@ -1,3 +1,16 @@
+
+"  ██╗██████╗░███████╗░█████╗░██╗░░░██╗██╗███╗░░░███╗
+"  ██║██╔══██╗██╔════╝██╔══██╗██║░░░██║██║████╗░████║
+"  ██║██║░░██║█████╗░░███████║╚██╗░██╔╝██║██╔████╔██║
+"  ██║██║░░██║██╔══╝░░██╔══██║░╚████╔╝░██║██║╚██╔╝██║
+"  ██║██████╔╝███████╗██║░░██║░░╚██╔╝░░██║██║░╚═╝░██║
+"  ╚═╝╚═════╝░╚══════╝╚═╝░░╚═╝░░░╚═╝░░░╚═╝╚═╝░░░░░╚═╝
+
+
+"===============================================
+"                 Options
+"===============================================
+
 set ignorecase
 set smartcase
 set hlsearch
@@ -18,6 +31,10 @@ set ideajoin
 set multiple-cursors
 
 " These settings are from - https://github.com/Valloric/dotfiles/blob/master/intellij/ideavimrc
+
+"=====================================================
+"                    Keymappings
+"=====================================================
 
 " let mapleader = ","
 let mapleader = " "
@@ -73,9 +90,10 @@ nmap <leader>wd :action OpenEditorInOppositeTabGroup<cr>
 " nmap <leader>ww :action JumpToLastWindow<cr>
 
 " NERDTree
-map <leader>e :NERDTree<CR>
-map <leader>nf :NERDTreeFind<CR>
-map <leader>n  :action NewFile<CR>
+map <leader>e :NERDTreeToggle<cr>
+map <leader>o :NERDTreeFocus<cr>
+map <leader>nf :NERDTreeFind<cr>
+map <leader>n  :action NewFile<cr>
 
 " Navigation
 nmap <leader>h :action Back<cr>

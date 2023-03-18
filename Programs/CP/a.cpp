@@ -89,34 +89,33 @@ void local (){
 }  
 //===================================================================================================================
 
-// ll inf = 1e18 ;
+ll inf = 1e18 ;
 ll md = 1e9+7; //998244353;
 
 //=============================================
+
 
 
 void solve () {
     int n;
     cin>>n;
 
-    map<int,int> m;
+    ll sum = 0;
+    bool e = false, o = false;
     for(int i=0; i<n; ++i) {
         int temp;
         cin>>temp;
-        m[temp]++;
+        if(temp%2 == 0) e = true;
+        else o = true;
+        sum += temp;
     }
 
-    int i=1;
-    ll prod = 1;
-    ll ans = 0;
-    for(auto it=m.begin(); it!=m.end(); ++it) {
-        if(it->first != i) break;
-        prod *= it->second;
-        ans = (ans + prod) % md;
-        i++;
+    if(sum%2 == 0) {
+        cout<<"YES"<<endl;
+    } else {
+        cout<<"NO"<<endl;
     }
 
-    cout<<ans<<endl;
 }
 
 
@@ -138,3 +137,9 @@ while (t--) {
     cerr << "Time : " << 1000 * ((double)clock()) / (double)CLOCKS_PER_SEC << " ms\n";
 #endif
 }
+
+/*
+1 0 1
+0 1 0
+1 0 1
+*/

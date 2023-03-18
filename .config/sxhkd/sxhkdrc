@@ -1,19 +1,18 @@
-
 #=================================================
 # 								bspwm hotkeys
 #=================================================
 
 # quit/restart bspwm
-super + shift + {q,r}
+super + shift + {w,r}
 	bspc {quit,wm -r}
 
 # close and kill
-# super + {_,shift + }w
-# 	bspc node -{c,k}
+super + {_,shift + }q
+	bspc node -{c,k}
 
-# kill a window
-super + q
-	bspc node -c
+# # kill a window
+# super + q
+# 	bspc node -c
 
 # alternate between the tiled and monocle layout
 super + m
@@ -118,13 +117,13 @@ super + {Left,Down,Up,Right}
 super + Return
 	alacritty
 
-# program launcher
+# run launcher
 alt + space
-	~/.config/dmenu/scripts/application-launcher-dmenu.sh
+	~/.config/dmenu/scripts/run-launcher-dmenu.sh
 
 # run launcher
-ctrl + space
-	~/.config/dmenu/scripts/run-launcher-dmenu.sh
+# ctrl + space
+# 	~/.config/dmenu/scripts/run-launcher-dmenu.sh
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -132,7 +131,7 @@ super + Escape
 
 # open applications 
 super + shift + {b,f,v}
-	{brave, thunar, code}
+	{brave, alacritty -e ranger, code}
 
 # multimedia control
 XF86Audio{Play,Next,Prev}
@@ -147,10 +146,10 @@ XF86MonBrightness{Up,Down}
   ~/.bin/brightness --{up,down}
 
 # rofi menus
-super + {space,Print,v,o}
-	~/.config/rofi/bin/{launcher.sh,screenshot.sh,clipboard-manager-rofi,file-browser-rofi}
+super + {Print,v,o}
+	~/.config/rofi/bin/{,screenshot.sh,clipboard-manager-rofi,file-browser-rofi}
 
 # dmenu menus
-super + {e,shift + e}
-	~/.config/dmenu/scripts/{edit-config-dmenu.sh,powermenu-dmenu.sh}
+super + {space,e,shift + e}
+	~/.config/dmenu/scripts/{application-launcher-dmenu.sh,edit-config-dmenu.sh,powermenu-dmenu.sh}
 

@@ -42,7 +42,7 @@ picom --config  ~/.config/picom/picom.conf &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # set wallpaper
-~/.fehbg &
+~/.config/.fehbg &
 
 # set powersavings for display:
 xset s 480 dpms 600 600 600 &
@@ -51,13 +51,17 @@ xset s 480 dpms 600 600 600 &
 dbus-launch dunst --config ~/.config/dunst/dunstrc &
 
 # launch tray applets
+killall nm-applet
 nm-applet &
-blueman-tray &
+
+killall blueman-applet
+blueman-applet &
 
 # start libinput-gestures
 libinput-gestures-setup start &
 
 # polybar
+killall polybar
 ~/.config/polybar/launch.sh &
 
 # start greenclip daemon

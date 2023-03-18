@@ -29,7 +29,8 @@ add_newline = true
 
 [directory]
 read_only = " "
-style = "lavender"
+style = "bold lavender"
+fish_style_pwd_dir_length = 2
 
 [git_branch]
 format = "[󰣏](sky) [$symbol$branch ]($style)"
