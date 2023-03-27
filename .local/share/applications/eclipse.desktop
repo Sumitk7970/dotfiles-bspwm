@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Eclipse IDE
+Encoding=UTF-8
+Version=1.1
+Exec=/opt/eclipse/eclipse %u
+Type=Application

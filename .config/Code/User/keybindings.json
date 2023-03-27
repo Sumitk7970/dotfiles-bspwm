@@ -151,13 +151,18 @@
     //                  vscode-nvim
     //===========================================================
     {
+        "key": "Escape", 
+        "command": "vscode-neovim.escape", 
+        "when": "editorTextFocus && neovim.mode == insert"
+    },
+    {
         "command": "vscode-neovim.compositeEscape1",
         "key": "j",
         "when": "neovim.mode == insert && editorTextFocus",
         "args": "j"
     },
     {
-        "key": "ctrl+;",
+        "key": "ctrl+b",
         "command": "workbench.action.toggleSidebarVisibility"
     },
     {
@@ -186,6 +191,21 @@
 		"key": "shift+space",
 		"command": "whichkey.show",
 		"when": "textInputFocus || inputFocus"
-	},
+    },
+    {
+        "key": "ctrl+b",
+        "command": "-vscode-neovim.ctrl-b",
+        "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'"
+    },
+    {
+        "key": "alt+enter",
+        "command": "editor.action.quickFix",
+        "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+.",
+        "command": "-editor.action.quickFix",
+        "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    },
 
 ]

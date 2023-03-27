@@ -13,8 +13,9 @@
 
 set ignorecase
 set smartcase
-set hlsearch
-set scrolloff=3 " 3 lines above/below cursor when scrolling
+" set hlsearch
+set scrolloff=8 " 3 lines above/below cursor when scrolling
+set incsearch
 
 " Emulated Plugins
 set surround
@@ -46,6 +47,12 @@ let mapleader = " "
 
 " use jj to escape
 imap jj <Esc>
+
+" use escape for hiding highlight after search
+nmap <Esc> :noh<cr>
+
+" reload config
+nmap <leader>sc :source ~/.ideavimrc<cr>
 
 " Use Q for formatting the current paragraph (or visual selection)
 vmap Q gq
@@ -100,9 +107,9 @@ nmap <leader>h :action Back<cr>
 nmap <leader>l :action Forward<cr>
 nmap <leader>L :action RecentLocations<cr>
 nmap <leader>u :action FindUsages<cr>
-nmap <leader>C :action CallHierarchy<cr>
+" nmap <leader>C :action CallHierarchy<cr>
 nmap <leader>f :action GotoFile<cr>
-nmap <leader>c :action GotoClass<cr>
+" nmap <leader>c :action GotoClass<cr>
 nmap <leader>s :action GotoSymbol<cr>
 nmap <leader>m :action ToggleBookmark<cr>
 nmap <leader>; :action FileStructurePopup<cr>
@@ -111,7 +118,7 @@ nmap <leader>d :action ShowErrorDescription<cr>
 nmap <leader>i :action GotoImplementation<cr>
 nmap <leader>U :action GotoSuperMethod<cr>
 nmap <leader>I :action SelectIn<cr>
-nmap <leader>e :action RecentFiles<cr>
+" nmap <leader>e :action RecentFiles<cr>
 nmap <leader>a :action RecentChangedFiles<cr>
 nmap <leader>t :action GotoTest<cr>
 nmap <leader>p :action JumpToLastWindow<cr>
@@ -136,7 +143,7 @@ vmap T :action Refactorings.QuickListPopupAction<cr>
 vmap <leader>rm :action ExtractMethod<cr>
 nmap <leader>rr :action RenameElement<cr>
 nmap <leader>rg :action Generate<cr>
-nmap <leader>rI :action OptimizeImports<cr>
+nmap <leader>ri :action OptimizeImports<cr>
 " Inspection
 nmap <leader>rc :action InspectCode<cr>
 
@@ -171,8 +178,8 @@ nmap <a-k> 15gk
 
 " Won't work in visual mode (with vmap) for some reason.
 " Use default map of <c-/> for that.
-nmap gcc :action CommentByLineComment<cr>
-vmap gcc :action CommentByLineComment<cr>
+" nmap gcc :action CommentByLineComment<cr>
+" vmap gcc :action CommentByLineComment<cr>
 
 " unimpaired mappings - from https://github.com/saaguero/ideavimrc/blob/master/.ideavimrc
 nnoremap [<space> O<esc>j

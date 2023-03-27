@@ -19,6 +19,9 @@ for contest in contests :
 upcoming_contests.sort(key=lambda contest: contest["startTimeSeconds"])
 
 # print upcoming_contests to file
-with open('upcoming_contests', 'w') as f:
+FILE = '/home/sumit/.config/polybar/scripts/contests/upcoming_contests'
+
+with open(FILE, 'w') as f:
     for contest in upcoming_contests : 
         print(contest, file=f)
+

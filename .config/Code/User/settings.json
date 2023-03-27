@@ -1,6 +1,6 @@
 {
     "workbench.colorTheme": "Catppuccin Macchiato",
-    "editor.fontSize": 17,
+    "editor.fontSize": 16,
     "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
 
     // "multiCommand.commands": [
@@ -180,6 +180,13 @@
         "editor.formatOnType": true
     },
     "editor.cursorSurroundingLines": 8,
+    "update.mode": "none",
+    "terminal.integrated.fontSize": 15,
+    "files.autoSave": "afterDelay",
+    "window.zoomLevel": 0.25,
+    "editor.detectIndentation": false,
+    "editor.cursorBlinking": "solid",
+    "workbench.iconTheme": "material-icon-theme",
 
 
 }

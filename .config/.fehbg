@@ -1,2 +1,3 @@
 #!/bin/sh
-feh --randomize --no-fehbg --bg-fill '/home/sumit/Pictures/Wallpapers' 
+# feh --randomize --no-fehbg --bg-fill '/home/sumit/Pictures/Wallpapers' 
+feh --bg-fill '/home/sumit/Pictures/Wallpapers/cat-sound.png' 

@@ -1,0 +1,5 @@
+[MIME Cache]
+x-scheme-handler/eclipse+command=_usr_lib_eclipse_.desktop;
+x-scheme-handler/eclipse+installer=_home_sumit_Downloads_eclipse-installer_.desktop;
+x-scheme-handler/eclipse+mpc=_usr_lib_eclipse_.desktop;
+x-scheme-handler/joplin=appimagekit-joplin.desktop;

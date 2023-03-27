@@ -9,7 +9,7 @@ fi
 #=====================================================
 #                  add to path
 #=====================================================
-export PATH="/usr/lib/w3m:$PATH" # for ranger image preview
+# export PATH="/usr/lib/w3m:$PATH" # for ranger image preview in i3
 export PATH="/home/sumit/anaconda3/bin:$PATH"
 export PATH="/home/sumit/.local/bin:$PATH"
 export PATH="/home/sumit/.bin:$PATH"

@@ -278,6 +278,8 @@ local nx_keymap = function(lhs, rhs)
   vim.api.nvim_set_keymap('v', lhs, rhs, { silent = true })
 end
 
+-- local maps = { i = {}, n = {}, v = {}, t = {} }
+
 --#region keymap
 vim.g.mapleader = " "
 

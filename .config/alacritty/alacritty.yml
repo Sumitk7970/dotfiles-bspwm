@@ -14,7 +14,8 @@ window:
   # decorations: full
   # decorations_theme_variant: dark
   # title: Alacritty@Garuda
-  opacity: 0.7
+  # opacity: 0.7
+  opacity: 1
   # class:
   #   instance: Alacritty
   #   general: Alacritty
@@ -65,68 +66,3 @@ key_bindings:
   - { key: Minus,    mods: Control,       action: DecreaseFontSize }
   - { key: Minus,    mods: Control,       action: DecreaseFontSize }
 
-
-# colors:
-#   # Default colors
-#   primary:
-#     background: '0x24273a'
-#     foreground: '0xcad3f5'
-#
-#     # Bright and dim foreground colors
-#     #
-#     # The dimmed foreground color is calculated automatically if it is not present.
-#     # If the bright foreground color is not set, or `draw_bold_text_with_bright_colors`
-#     # is `false`, the normal foreground color will be used.
-#     #dim_foreground: '0x9a9a9a'
-#     bright_foreground: '0xe6efff'
-#
-#   # Cursor colors
-#   #
-#   # Colors which should be used to draw the terminal cursor. If these are unset,
-#   # the cursor color will be the inverse of the cell color.
-#   #cursor:
-#   #  text: '0x000000'
-#   #  cursor: '0xffffff'
-#
-#   # Normal colors
-#   normal:
-#     black:   '0x1e2030'
-#     red:     '0xed8796'
-#     green:   '0xa6da95'
-#     yellow:  '0xeed49f'
-#     blue:    '0x8aadf4'
-#     magenta: '0xc6a0f6'
-#     cyan:    '0x8bd5ca'
-#     white:   '0xb8c0e0'
-#
-#   # Bright colors
-#   bright:
-#     black:   '0x585b70'
-#     red:     '0xf38ba8'
-#     green:   '0xa6e3a1'
-#     yellow:  '0xf9e2af'
-#     blue:    '0x89b4fa'
-#     magenta: '0xcba6f7'
-#     cyan:    '0x94e2d5'
-#     white:   '0xbac2de'
-
-  # # Dim colors
-  # #
-  # # If the dim colors are not set, they will be calculated automatically based
-  # # on the `normal` colors.
-  # dim:
-  #   black:   '0x1e2127'
-  #   red:     '0xe06c75'
-  #   green:   '0x98c379'
-  #   yellow:  '0xd19a66'
-  #   blue:    '0x61afef'
-  #   magenta: '0xc678dd'
-  #   cyan:    '0x56b6c2'
-  #   white:   '0x828791'
-
-  # Indexed Colors
-  #
-  # The indexed colors include all colors from 16 to 256.
-  # When these are not set, they're filled with sensible defaults.
-  #indexed_colors:
-  #  - { index: 16, color: '0x000000' }

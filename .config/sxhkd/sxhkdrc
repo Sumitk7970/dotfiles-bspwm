@@ -153,3 +153,12 @@ super + {Print,v,o}
 super + {space,e,shift + e}
 	~/.config/dmenu/scripts/{application-launcher-dmenu.sh,edit-config-dmenu.sh,powermenu-dmenu.sh}
 
+super + z 
+    id=$(bspc query -N -n); \
+    [[ "$(tabc printclass $id)" == "tabbed" ]] \
+    && tabc detach $id \
+    || tabc create $id 
+    
+# toggle autoattach in tabbed container
+super + shift + z 
+    tabc autoattach $(bspc query -N -n)
