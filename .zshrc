@@ -46,8 +46,8 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # for java awt applications not working properly
 export _JAVA_AWT_WM_NONREPARENTING=1
 
-# run pfetch at startup
-pfetch
+# run diyfetch at startup
+diyfetch
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8

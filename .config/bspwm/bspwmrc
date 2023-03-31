@@ -21,6 +21,7 @@ bspc rule -a Blueman-manager state=floating
 bspc rule -a nm-connection-editor state=floating
 bspc rule -a Yad state=floating
 bspc rule -a lxappearance state=floating
+bspc rule -a feh state=floating
 
 #=============================================
 #                   Border
@@ -66,4 +67,8 @@ killall polybar
 
 # start greenclip daemon
 greenclip daemon &
+
+# start low battery notifier script
+killall low_bat_notifier.sh
+~/.bin/low_bat_notifier.sh &
 

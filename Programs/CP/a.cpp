@@ -227,36 +227,56 @@ void unio(int u, int v) {
     par[u] = v;
 }
 
+ll repeat(int n, int count) {
+    ll ans = 0;
+    for(int i=0; i<count; ++i) {
+        ans = ans*10 + n;
+    }
+    return ans;
+}
+
 void solve() {
     int n;
     cin>>n;
-    vvl v(n, vl(2));
-    for(int i=0; i<n; ++i) {
-        cin>>v[i][0];
-        cin>>v[i][1];
+    
+
+    vi ans(n+1);
+
+    vi a(n+1);
+    for(int i=0; i<=n; ++i) a[i] = i;
+    int val = n;
+    for(int i=0; i<n-1; ++i) {
+        cout<<"? ";
+        for(int j=1; j<=n; ++j) cout<<a[j]<<" ";
+        cout<<endl;
+        int k;
+        cin>>k;
+        vi ind(k);
+        for(int k1=0; k1<k; ++k1) cin>>ind[k1];
+
+        // swap
+        ans[a[ind[k-1-i]]] = val--;
+        int temp = a[ind[k-1-i]];
+        a[ind[k-1-i]] = a[n-i];
+        a[n-i] = temp;
     }
 
-    int count = 1;
-    vi d(n);
-    for(int i=1; i<n; ++i) {
-        ll l = lcm(v[i-1][1], v[i][1]);
-        if((v[i-1][0]%(l/v[i-1][1])==0) && (v[i][0]%(l/v[i][1])==0)) {
-            if(d[i-1] != 0) {
-                ll cost = (ll)d[i-1]*v[i-1][1];
-                ll di = cost/v[i][1];
-                if(v[i][0]%di == 0) {
-                    d[i] = di;
-                } else {
-                    count++;
-                }
-            } else {
-                
-            }
-        }
+    cout<<"! ";
+    for(int i=1; i<=n; ++i) {
+        if(ans[i]==0) cout<<1<<" ";
+        else cout<<ans[i]<<" ";
     }
+    cout<<endl;
 
-    cout<<count<<endl;
+    int verdict;
+    cin>>verdict;
 }
+
+// 1 2 3 4 - 2 4 3 1 = 1 2
+// 2 3 4 1 - 4 3 1 2 = 1 
+// 3 4 1 2 - 3 1 4 2 = 1 3
+// 1 3 4 2 - 2 3 1 4 = 1 2 4
+// 1 4 3 2 - 2 1 3 4 = 1 3 4
 
 //==================================================================================================
 int main()

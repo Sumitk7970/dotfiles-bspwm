@@ -1,0 +1,29 @@
+#!/bin/bash
+
+#===========================================================
+# open vscode in a project directory just by passing a 
+# shortened name of the project
+#===========================================================
+
+cmd="/usr/bin/code"
+
+# open vscode in the previous directory if project is not specified
+if [ -z "$1" ]; then
+  $cmd &
+  exit 0
+fi
+
+# get the full path of directory present inside 
+# Programs/ directory using autojump
+project_dir=$(autojump programs $1)
+echo $project_dir
+
+# if project is not found then send a notification and exit
+if [ $project_dir == "" ]; then
+  notify-send "Project not found"
+  exit 1
+fi
+
+# open vscode in project_dir
+$cmd --new-window "$project_dir"
+

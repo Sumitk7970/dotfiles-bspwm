@@ -69,3 +69,6 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 - atool for extracting and compressing any type of file
 - tabliss extension for brave
 
+## testing
+- **[TODO]** bt-dualboot
+

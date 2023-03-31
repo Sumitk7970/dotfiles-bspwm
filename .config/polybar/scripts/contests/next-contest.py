@@ -24,6 +24,9 @@ contest_datetime = datetime.datetime.fromtimestamp(contest_time)
 current_datetime = datetime.datetime.now()
 
 # difference of days between contest_time and current_time
+# TODO: fix a bug
+# this is not a correct way to measure date diff
+# for ex: if 1 april - 31 march is -1
 diff = contest_datetime.day - current_datetime.day
 
 if diff > 1 :
