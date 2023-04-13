@@ -1,41 +1,48 @@
+
+# ███████╗░██████╗██╗░░██╗██████╗░░█████╗░
+# ╚════██║██╔════╝██║░░██║██╔══██╗██╔══██╗
+# ░░███╔═╝╚█████╗░███████║██████╔╝██║░░╚═╝
+# ██╔══╝░░░╚═══██╗██╔══██║██╔══██╗██║░░██╗
+# ███████╗██████╔╝██║░░██║██║░░██║╚█████╔╝
+# ╚══════╝╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░
+
 # init starship prompt
 eval "$(starship init zsh)"
 
-# source catppuccin-macchiato zsh-syntax-highlighting theme
-if [[ -f "$HOME/.zsh/catppuccin_macchiato-zsh-syntax-highlighting.zsh" ]]; then
-  source "$HOME/.zsh/catppuccin_macchiato-zsh-syntax-highlighting.zsh"
-fi
+# run diyfetch at startup
+diyfetch
 
-#=====================================================
-#                  add to path
-#=====================================================
-# export PATH="/usr/lib/w3m:$PATH" # for ranger image preview in i3
-export PATH="/home/sumit/anaconda3/bin:$PATH"
-export PATH="/home/sumit/.local/bin:$PATH"
-export PATH="/home/sumit/.bin:$PATH"
+# zsh home
+export ZSH=$HOME/.config/zsh
 
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+#===========================================
+#           history config
+#===========================================
+export HISTFILE=$ZSH/.zsh_history
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
+# How many commands zsh will load to memory.
+export HISTSIZE=10000
+
+# How many commands history will save on file.
+export SAVEHIST=10000
+
+# History won't save duplicates.
+setopt HIST_IGNORE_ALL_DUPS
+
+# History won't show duplicates on search.
+setopt HIST_FIND_NO_DUPS
+
+
+# for case insensitive completion
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
+autoload -Uz compinit && compinit
 
 # Uncomment the following line to use hyphen-insensitive completion.
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 HYPHEN_INSENSITIVE="true"
 
-#=====================================================
-#                 zsh plugins
-#=====================================================
-plugins=(
-  git
-  autojump
-  zsh-syntax-highlighting
-  zsh-autosuggestions
-  vi-mode
-)
-
-source $ZSH/oh-my-zsh.sh
+# set autocd
+setopt autocd
 
 # set default editor
 export EDITOR='nvim'
@@ -46,37 +53,34 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 # for java awt applications not working properly
 export _JAVA_AWT_WM_NONREPARENTING=1
 
-# run diyfetch at startup
-diyfetch
-
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
 #=====================================================
-#                  aliases
+#                  add to path
 #=====================================================
-alias update="sudo pacman -Syyu"
-alias update-mirrors="sudo reflector --verbose --country 'India' -l 5 --sort rate --save /etc/pacman.d/mirrorlist"
-alias vim=nvim
-alias ii="sudo pacman -S"
-alias rr="sudo pacman -Rns"
-alias ss="pacman -Ss"
-alias conf="nvim ~/.config/i3/config"
-alias e="exit"
-alias c="clear"
-alias dot="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
-alias la="ls -A"
-alias mv="mv -i"
-alias rm="rm -i"
-alias v="vim"
-alias gt="cd ~/Downloads/gitthings"
-alias cat="bat"
-alias less="bat"
-alias ex="atool -x"
-alias mysql="mycli"
-alias vpn="protonvpn-cli"
+export PATH="/home/sumit/anaconda3/bin:$PATH"
+export PATH="/home/sumit/.local/bin:$PATH"
+export PATH="/home/sumit/.bin:$PATH"
 
 
+# aliases
+source ~/.config/zsh/aliases.zsh
+
+# vi mode
+bindkey -v
+
+# autosuggestions
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# source catppuccin-macchiato zsh-syntax-highlighting theme
+if [[ -f "$ZSH/catppuccin_macchiato-zsh-syntax-highlighting.zsh" ]]; then
+  source "$ZSH/catppuccin_macchiato-zsh-syntax-highlighting.zsh"
+fi
+
+# zsh zsh-syntax-highlighting
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Load Angular CLI autocompletion.
 # source <(ng completion script)
+

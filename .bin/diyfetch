@@ -33,7 +33,7 @@ teal=6
 
 # You can add some eye candy icons with Emoji of use Nerd Fonts (https://www.nerdfonts.com).
 info=$(gum style "\
-[1;38;5;${blue}mOS:        [0mEndeavourOS
+[1;38;5;${blue}mOS:        [0mArch Linux
 [1;38;5;${teal}mKERNEL:    [0m$(uname -sr)
 [1;38;5;${green}mUPTIME:    [0m$(uptime -p | cut -c 4-)
 [1;38;5;${red}mSHELL:     [0m$(basename "${SHELL}")
@@ -43,13 +43,13 @@ info=$(gum style "\
 
 # You can get OS arts on https://github.com/info-mono/os-ansi
 # copy the raw data of the .ansi file then paste it down below.
-art=$(gum style "      [36m/\\[0m
-     [36m/  \\[0m
-    [36m/\\   \\[0m
-   [34m/      \\[0m
-  [34m/   ,,   \\[0m
- [34m/   |  |  -\\[0m
-[34m/_-''    ''-_\\[0m")
+art=$(gum style "      [36m/\\\[0m
+     [36m/  \\\[0m
+    [36m/\\\  \\\[0m
+   [34m/      \\\[0m
+  [34m/   ,,   \\\[0m
+ [34m/   |  |  -\\\[0m
+[34m/_-''    ''-_\\\[0m")
 
 # You can generate colorstrip using https://github.com/info-mono/colorstrip
 # color=$(gum style '[0;30m███[0;31m███[0;32m███[0;33m███[0;34m███[0;35m███[0;36m███[0;37m███[0m

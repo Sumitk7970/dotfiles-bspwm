@@ -23,9 +23,11 @@ scan_timeout = 10
 # Disable the blank line at the start of the prompt
 add_newline = true
 
-# [character]
-# success_symbol = "[❯](sapphire)[❯](lavender)[❯](green)"
-# error_symbol = "[❯](sapphire)[❯](lavender)[❯](red)"
+[character]
+success_symbol = "[❯](green)"
+error_symbol = "[❯](red)"
+vimcmd_symbol = "[❮](bold yellow)"
+vimcmd_visual_symbol = "[❮](bold blue)"
 
 [directory]
 read_only = " "

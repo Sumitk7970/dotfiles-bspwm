@@ -1,8 +1,7 @@
 {
     "workbench.colorTheme": "Catppuccin Macchiato",
     "editor.fontSize": 16,
-    "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
-
+    "editor.fontFamily": "JetBrainsMono Nerd Font",
     // "multiCommand.commands": [
     //     {
     //         "command": "multiCommand.copyAll",
@@ -22,7 +21,6 @@
     //         ]
     //     }
     // ],
-    
     // "vim.leader": "<space>",
     // "vim.easymotion": true,
     // "vim.incsearch": true,
@@ -106,7 +104,6 @@
     //     "<C-f>": false
     // },
     // "vim.timeout": 500,
-
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "code-runner.runInTerminal": true,
@@ -166,7 +163,6 @@
         "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         "sml": "cd $dir && sml $fileName"
     },
-    
     // for neovim extension
     "extensions.experimental.affinity": {
         "asvetliakov.vscode-neovim": 1
@@ -187,7 +183,6 @@
     "editor.detectIndentation": false,
     "editor.cursorBlinking": "solid",
     "workbench.iconTheme": "material-icon-theme",
-
-
+    "editor.fontLigatures": true,
+    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0 }",
 }
-

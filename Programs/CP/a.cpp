@@ -29,11 +29,9 @@ typedef vector<vi> vvi;
 typedef vector<vl> vvl;
 //============================================================================================
 // costum comparator
-struct myComp
-{
-    constexpr bool operator()(pair<ll, pl> const &a,
-                              pair<ll, pl> const &b) const noexcept
-    {
+struct myComp {
+    constexpr bool operator()(pair<ll, pl> const& a,
+                              pair<ll, pl> const& b) const noexcept {
         if ((a.F) != b.F)
             return (((a).F) > (b).F);
         else
@@ -52,10 +50,7 @@ struct myComp
 #define dbg(x)
 #endif
 
-void _print(ll t)
-{
-    cerr << t;
-}
+void _print(ll t) { cerr << t; }
 void _print(int t) { cerr << t; }
 void _print(string t) { cerr << t; }
 void _print(char t) { cerr << t; }
@@ -82,8 +77,7 @@ void _print(map<T, V> v);
 template <class T>
 void _print(multiset<T> v);
 template <class T, class V>
-void _print(pair<T, V> p)
-{
+void _print(pair<T, V> p) {
     cerr << "{";
     _print(p.F);
     cerr << ",";
@@ -91,88 +85,72 @@ void _print(pair<T, V> p)
     cerr << "}";
 }
 template <class T>
-void _print(vector<T> v)
-{
+void _print(vector<T> v) {
     cerr << "[ ";
-    for (T i : v)
-    {
+    for (T i : v) {
         _print(i);
         cerr << " ";
     }
     cerr << "]";
 }
 template <class T>
-void _print(set<T> v)
-{
+void _print(set<T> v) {
     cerr << "[ ";
-    for (T i : v)
-    {
+    for (T i : v) {
         _print(i);
         cerr << " ";
     }
     cerr << "]";
 }
 template <class T>
-void _print(multiset<T> v)
-{
+void _print(multiset<T> v) {
     cerr << "[ ";
-    for (T i : v)
-    {
+    for (T i : v) {
         _print(i);
         cerr << " ";
     }
     cerr << "]";
 }
 template <class T, class V>
-void _print(map<T, V> v)
-{
+void _print(map<T, V> v) {
     cerr << "[ ";
-    for (auto i : v)
-    {
+    for (auto i : v) {
         _print(i);
         cerr << " ";
     }
     cerr << "]";
 }
 template <class T>
-void _print(set<T, greater<T>> v)
-{
+void _print(set<T, greater<T>> v) {
     cerr << "[ ";
-    for (T i : v)
-    {
+    for (T i : v) {
         _print(i);
         cerr << " ";
     }
     cerr << "]";
 }
 template <class T>
-void _print(multiset<T, myComp> v)
-{
+void _print(multiset<T, myComp> v) {
     cerr << "[ ";
-    for (T i : v)
-    {
+    for (T i : v) {
         _print(i);
         cerr << " ";
     }
     cerr << "]";
 }
 template <class T>
-void _print(set<T, myComp> v)
-{
+void _print(set<T, myComp> v) {
     cerr << "[ ";
-    for (T i : v)
-    {
+    for (T i : v) {
         _print(i);
         cerr << " ";
     }
     cerr << "]";
 }
 template <class T>
-void _print(unordered_set<T> v)
-{
+void _print(unordered_set<T> v) {
     cerr << "[ ";
-    for (T i : v)
-    {
+    for (T i : v) {
         _print(i);
         cerr << " ";
     }
@@ -181,15 +159,23 @@ void _print(unordered_set<T> v)
 //=================================================================================================
 /*  some useful code snippets!
   1>  Getprime - to get prime till a number limit. !!!
-  2>  Primefactorize - to get all prime factors in sorted order of a number n by using seive. !!!
-  3>  Power_exponentiation  - gives power function to get a^n in log (n) time. !!!
-  4>  inverse_modulo - gives inverse modulo of a number wrt md.  !!!
-  5>  nCr_modulo_md - gives nCr % md in log (md) time.  !!!
+  2>  Primefactorize - to get all prime factors in sorted order of a number n by
+  using seive. !!! 3>  Power_exponentiation  - gives power function to get a^n
+  in log (n) time. !!! 4>  inverse_modulo - gives inverse modulo of a number wrt
+  md.  !!! 5>  nCr_modulo_md - gives nCr % md in log (md) time.  !!!
 */
+
+ll gcd(ll a, ll b) {
+    if (a % b == 0) return b;
+    return gcd(b, a % b);
+}
+
+ll lcm(ll a, ll b) { return a / gcd(a, b) * b; }
+
 //===============================================================================================================
-void local()
-{
+void local() {
 #ifndef ONLINE_JUDGE
+
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
     freopen("error.txt", "w", stderr);
@@ -198,23 +184,14 @@ void local()
 //===================================================================================================================
 
 ll inf = 1e18;
-ll md = 1e9 + 7; // 998244353;
-
-ll gcd(ll a, ll b) {
-    if(a%b == 0) return b;
-    return gcd(b, a%b);
-}
-
-ll lcm(ll a, ll b) {
-    return a/gcd(a,b)*b;
-}
+ll md = 1e9 + 7;  // 998244353;
 
 //=============================================
 
 vi par;
 
 int find(int u) {
-    if(par[u] == u) return u;
+    if (par[u] == u) return u;
 
     return par[u] = find(par[u]);
 }
@@ -222,83 +199,82 @@ int find(int u) {
 void unio(int u, int v) {
     u = find(u);
     v = find(v);
-    if(u == v) return;
+    if (u == v) return;
 
     par[u] = v;
 }
 
-ll repeat(int n, int count) {
-    ll ans = 0;
-    for(int i=0; i<count; ++i) {
-        ans = ans*10 + n;
-    }
-    return ans;
+void yes() {cout<<"YES"<<endl;}
+void no() {cout<<"NO"<<endl;}
+
+int helper(int a, int b, int c) {
+    if(a==b && b==c) return a;
+    if(a==b) return c;
+    if(b==c) return a;
+
+    if(a<b && b<c) return a + c-b;
+    if(a<b && b>c) return a - (b-c);
+    if(a>b && b<c) return a + (c-b);
+    return a - (b-c);
 }
 
 void solve() {
     int n;
     cin>>n;
-    
+    vi a(n);
+    int i;
+    fo(i,n) cin>>a[i];
 
-    vi ans(n+1);
-
-    vi a(n+1);
-    for(int i=0; i<=n; ++i) a[i] = i;
-    int val = n;
-    for(int i=0; i<n-1; ++i) {
-        cout<<"? ";
-        for(int j=1; j<=n; ++j) cout<<a[j]<<" ";
-        cout<<endl;
-        int k;
-        cin>>k;
-        vi ind(k);
-        for(int k1=0; k1<k; ++k1) cin>>ind[k1];
-
-        // swap
-        ans[a[ind[k-1-i]]] = val--;
-        int temp = a[ind[k-1-i]];
-        a[ind[k-1-i]] = a[n-i];
-        a[n-i] = temp;
+    i=1;
+    int prev = a[0];
+    while(i < n) {
+        int next = -1;
+        if(i<n-1) next = a[i+1];
+        if(next == -1) {
+            if(a[i] >= prev) yes();
+            else no();
+            return;
+        }
+        prev = helper(prev, a[i], next);
+        i += 2;
     }
 
-    cout<<"! ";
-    for(int i=1; i<=n; ++i) {
-        if(ans[i]==0) cout<<1<<" ";
-        else cout<<ans[i]<<" ";
-    }
-    cout<<endl;
-
-    int verdict;
-    cin>>verdict;
+    yes();
 }
 
-// 1 2 3 4 - 2 4 3 1 = 1 2
-// 2 3 4 1 - 4 3 1 2 = 1 
-// 3 4 1 2 - 3 1 4 2 = 1 3
-// 1 3 4 2 - 2 3 1 4 = 1 2 4
-// 1 4 3 2 - 2 1 3 4 = 1 3 4
+/*
+5 4 1 - 2 2 2
+1 4 3 - 0 0 0
+2 1 4 - 5 5 5
+    p*q = a
+    p*r = b
+    p*(q+r) >= a+b
+    q+r+p min
+
+    p-1 + a/p + b/p
+    p-1 + (a+b)/p
+*/
 
 //==================================================================================================
-int main()
-{
-
+int main() {
     // local ();
     fastio();
 
     int t = 1;
     cin >> t;
 
-    while (t--)
-    {
+    while (t--) {
         solve();
     }
 
 #ifndef ONLINE_JUDGE
-    cerr << "Time : " << 1000 * ((double)clock()) / (double)CLOCKS_PER_SEC << " ms\n";
+    cerr << "Time : " << 1000 * ((double)clock()) / (double)CLOCKS_PER_SEC
+         << " ms\n";
 #endif
 }
 
 /*
+10 45
  1 1
  0 2
  1 0

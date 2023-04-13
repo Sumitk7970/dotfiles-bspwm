@@ -9,6 +9,7 @@ cmd="/usr/bin/code"
 
 # open vscode in the previous directory if project is not specified
 if [ -z "$1" ]; then
+  # notify-send "argument not specified"
   $cmd &
   exit 0
 fi
@@ -17,6 +18,7 @@ fi
 # Programs/ directory using autojump
 project_dir=$(autojump programs $1)
 echo $project_dir
+# notify-send "Opening in: $project_dir"
 
 # if project is not found then send a notification and exit
 if [ $project_dir == "" ]; then
